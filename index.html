@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jasmeet Gaba</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta tag ^ -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- for Bootstrap to work -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- ^ bootstrap script -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- ^ jquery script -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ^ font awesome script -->
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        .size {
+            width: 230px;
+            height: 270px;
+        }
+
+        .cn1 {
+            height: 900px;
+
+        }
+
+        @font-face {
+            font-family: long;
+            src: url(Longterms-x32PR.ttf);
+        }
+
+        @font-face {
+            font-family: raag;
+            src: url(ragam-ragam-medium-500.ttf);
+        }
+
+        .raga {
+            font-family: raag;
+        }
+
+        .long1 {
+            font-family: long;
+        }
+
+        .bone {
+            border: 5px solid gold;
+        }
+
+
+
+        .rotate-in-2-fwd-ccw {
+            -webkit-animation: rotate-in-2-fwd-ccw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: rotate-in-2-fwd-ccw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        /**
+ * ----------------------------------------
+ * animation rotate-in-2-fwd-ccw
+ * ----------------------------------------
+ */
+        @-webkit-keyframes rotate-in-2-fwd-ccw {
+            0% {
+                -webkit-transform: translateZ(-200px) rotate(45deg);
+                transform: translateZ(-200px) rotate(45deg);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0) rotate(0);
+                transform: translateZ(0) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate-in-2-fwd-ccw {
+            0% {
+                -webkit-transform: translateZ(-200px) rotate(45deg);
+                transform: translateZ(-200px) rotate(45deg);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0) rotate(0);
+                transform: translateZ(0) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        .tracking-in-contract-bck {
+            -webkit-animation: tracking-in-contract-bck 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-contract-bck 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        }
+
+        /**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+        @-webkit-keyframes tracking-in-contract-bck {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(400px);
+                transform: translateZ(400px);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes tracking-in-contract-bck {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(400px);
+                transform: translateZ(400px);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                opacity: 1;
+            }
+        }
+
+        .jello-diagonal-1 {
+            -webkit-animation: jello-diagonal-1 1.5s both;
+            animation: jello-diagonal-1 1.5s both;
+            animation-iteration-count: infinite;
+        }
+
+        /**
+ * ----------------------------------------
+ * animation jello-diagonal-1
+ * ----------------------------------------
+ */
+        @-webkit-keyframes jello-diagonal-1 {
+            0% {
+                -webkit-transform: skew(0deg 0deg);
+                transform: skew(0deg 0deg);
+            }
+
+            30% {
+                -webkit-transform: skew(25deg 25deg);
+                transform: skew(25deg 25deg);
+            }
+
+            40% {
+                -webkit-transform: skew(-15deg, -15deg);
+                transform: skew(-15deg, -15deg);
+            }
+
+            50% {
+                -webkit-transform: skew(15deg, 15deg);
+                transform: skew(15deg, 15deg);
+            }
+
+            65% {
+                -webkit-transform: skew(-5deg, -5deg);
+                transform: skew(-5deg, -5deg);
+            }
+
+            75% {
+                -webkit-transform: skew(5deg, 5deg);
+                transform: skew(5deg, 5deg);
+            }
+
+            100% {
+                -webkit-transform: skew(0deg 0deg);
+                transform: skew(0deg 0deg);
+            }
+        }
+
+        @keyframes jello-diagonal-1 {
+            0% {
+                -webkit-transform: skew(0deg 0deg);
+                transform: skew(0deg 0deg);
+            }
+
+            30% {
+                -webkit-transform: skew(25deg 25deg);
+                transform: skew(25deg 25deg);
+            }
+
+            40% {
+                -webkit-transform: skew(-15deg, -15deg);
+                transform: skew(-15deg, -15deg);
+            }
+
+            50% {
+                -webkit-transform: skew(15deg, 15deg);
+                transform: skew(15deg, 15deg);
+            }
+
+            65% {
+                -webkit-transform: skew(-5deg, -5deg);
+                transform: skew(-5deg, -5deg);
+            }
+
+            75% {
+                -webkit-transform: skew(5deg, 5deg);
+                transform: skew(5deg, 5deg);
+            }
+
+            100% {
+                -webkit-transform: skew(0deg 0deg);
+                transform: skew(0deg 0deg);
+            }
+        }
+
+        .size2 img {
+            height: 250px;
+            width: 250px;
+        }
+
+        .heartbeat:hover {
+            -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+            animation: heartbeat 1.5s ease-in-out infinite both;
+        }
+
+        /**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+        @-webkit-keyframes heartbeat {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            10% {
+                -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            17% {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            33% {
+                -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        }
+
+        @keyframes heartbeat {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            10% {
+                -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            17% {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            33% {
+                -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        }
+
+        .home {
+            background-image: url(matrix.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-blend-mode: darken;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">My Skills</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid bg-dark text-danger fs-5 cn1 text-center home">
+        <div class="row pt-5">
+            <div class="pt-5 ps-3">
+                <img src="jas1.jpg" class="size bone rotate-in-2-fwd-ccw">
+                <h1 class="long1 mb-5 tracking-in-contract-bck">Jasmeet Singh Gaba</h1>
+
+                <img src="web.png" class="jello-diagonal-1">Web-Developer
+
+                <p> I am a <span class="text-warning">FullStack</span> developer with a keen interest in frontend design
+                    and have a knack for backend problem solving techniques;</p>
+
+                <h2 class="mt-5">What <span class="text-warning">Can</span> I do ?</h2>
+                <ul style="text-align:center;">
+                    <li>I can <span class="text-warning">develop</span> front-end website architecture</li>
+                    <li>I can <span class="text-warning">design</span> user interactions on the web page</li>
+                    <li>I can <span class="text-warning">develop</span> back-end website applications</li>
+                    <li>I can <span class="text-warning">create</span> servers and databases for functionality</li>
+                    <li>I can <span class="text-warning">ensure</span> cross-platform optimization for mobile phones
+                    </li>
+                    <li>I can <span class="text-warning">design</span> & develop APIs</li>
+                </ul>
+            </div>
+
+
+
+            <!-- <div class="col-md-4"><img src="jas1.jpg" class="size bone"></div> -->
+        </div>
+
+    </div>
+    <div class="my-5"></div>
+
+    <div class="container-fluid text-center" id="projects">
+        <h1 class="my-5">My Projects;</h1>
+        <h2 class="mb-5">1. Fire-<a href="https://jasmeetsgaba404.github.io/FireFist/">Fist</a></h2>
+        <h6 class="mb-2">Fire-Fist is an Anime T-shirt selling demo website designed by yours truly....</h6>
+
+        <img src="fire-home.png" class="img-fluid" width="auto" height="600">
+
+    </div>
+
+    <div class="container-fluid text-center my-5">
+        <h2 class="mb-5">2. Flipkart-<a href="https://jasmeetsgaba404.github.io/flipkart_clone/#">Clone</a></h2>
+        <h6 class="mb-2">A project that I made not far back to showcase my understanding of the Bootstrap Framework....
+        </h6>
+
+        <img src="flipkart.png" class="img-fluid" width="auto" height="600">
+    </div>
+
+
+    <div class="container-fluid text-center my-5">
+        <h2 class="mb-5">3. VSIT-<a href="https://jasmeetsgaba404.github.io/vsit_clone/">Clone</a></h2>
+        <h6 class="mb-2">The very first project that I made when I started my journey of coding....</h6>
+        <img src="vasit.png" class="img-fluid" width="auto" height="600">
+    </div>
+
+    <div class="container-fluid text-center" id="skills">
+        <h1 class="my-5">My Skillset;</h1>
+
+        <div class="row size2 pt-5">
+            <img src="html.svg.png" class="heartbeat">
+            <img src="CSS3_logo_and_wordmark.svg.png" class="heartbeat">
+            <img src="js.png" class="heartbeat">
+            <img src="bootstrap-tutorial.png" class="heartbeat">
+            <img src="node.png" class="heartbeat">
+
+        </div>
+        <div class="row size2 pt-5">
+            <img src="express.png" class="heartbeat">
+            <img src="mongo.png" class="heartbeat">
+            <img src="guide-video-playback-react.avif" class="heartbeat">
+        </div>
+    </div>
+    <div class="container-fluid fs-5 my-5" id="about">
+        <h2 class="text-center mb-5">About Me;</h2>
+        <p class="fs-3 long1">
+            I am a very simple guy with very orthodox interests. I love complex puzzles and I appreciate sleek designing. 
+            Full-Stack combines my two interests. My inspirations are Steve [both Jobs & Wozniak] and Alan Turing. I mention them because
+            their stories inspire me to do something original. Something that was considered impossible until it was done. Here is a quote from 
+            The Imitation Game (2014)&nbsp; &nbsp; [ Film based on Alan Turing's Contribution to the world ] : <br>
+            "Sometimes it's the very people who no one imagines anything of who do the things no one can imagine."
+        </p>
+        <h3 class="my-5">Education;</h3>
+        <ol class="raga">
+            <li>Earned Full-Stack Certificate from VSIT Coding Institue in Dwarka, New Delhi [April - October 2023].
+            </li>
+            <li>Graduated from QMUL [2019 - 2022].</li>
+        </ol>
+        <h3 class="my-5">Contact</h3>
+        <p class="raga">Email: Jasmeetgaba77@gmail.com</p>
+        <p class="raga">My Linked In: <a href="https://www.linkedin.com/in/jasmeet-singh-gaba-487440126/">Jasmeet
+                Gaba</a></p>
+        <p class="raga"></p>
+
+
+
+    </div>
+
+    <script>
+        let items = document.querySelectorAll('.carousel1 .item1')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+</body>
+
+</html>
